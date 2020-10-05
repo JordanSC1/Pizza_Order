@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+
+<GridPane prefHeight="600" prefWidth="500" styleClass="mainFxmlClass" 
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="grahajor.PizzeriaController">
+    <stylesheets>
+        <URL value="@/grahajorcss/a4_grahajor_css.css"/>
+    </stylesheets>
+    
+    <fx:define>
+        <ToggleGroup fx:id="sizes"/>
+        <ToggleGroup fx:id="drinks"/>
+    </fx:define>
+    
+    <columnConstraints>
+        <ColumnConstraints percentWidth = "2.0" />
+        <ColumnConstraints percentWidth = "38.0" />
+        <ColumnConstraints percentWidth = "20.0" />
+        <ColumnConstraints percentWidth = "38.0" />
+        <ColumnConstraints percentWidth = "2.0" />
+    </columnConstraints>
+    
+    <rowConstraints>
+        <RowConstraints percentHeight = "5.0"/>
+        <RowConstraints percentHeight = "10.0"/>
+        <RowConstraints percentHeight = "20.0"/>
+        <RowConstraints percentHeight = "10.0"/>
+        <RowConstraints percentHeight = "48.0"/>
+        <RowConstraints percentHeight = "7.0"/>
+    </rowConstraints>
+    
+    <MenuBar fx:id="optionMenu" GridPane.rowIndex="0"
+             GridPane.columnIndex="0" GridPane.columnSpan="5">
+        <Menu fx:id="file" text="_File">
+            <MenuItem fx:id="exit" text="_Exit"/>
+        </Menu>
+    </MenuBar>
+    
+    <HBox GridPane.rowIndex="1" GridPane.columnIndex="0"  
+          GridPane.columnSpan="5" styleClass="HBox">
+        <Label text="Pizzeria Assignment 4" styleClass="fancy-text"/>
+    </HBox>
+    
+    <VBox GridPane.rowIndex="2" GridPane.columnIndex="1">
+        <Label text="Pizza Size" styleClass="fancy-text"/>
+        <RadioButton text="Small" toggleGroup="$sizes">
+        </RadioButton>
+        <RadioButton text="Medium" toggleGroup="$sizes">
+        </RadioButton>
+        <RadioButton text="Large" toggleGroup="$sizes">
+        </RadioButton>
+        <TextField fx:id="numPizzas"/>
+    </VBox>
+    
+    <VBox GridPane.rowIndex="2" GridPane.columnIndex="2">
+        <Label text="Toppings" styleClass="fancy-text"/>
+        <CheckBox fx:id="toppingsCheese" text="Cheese"></CheckBox>
+        <CheckBox fx:id="toppingsPepperoni" text="Pepperoni"></CheckBox>
+        <CheckBox fx:id="toppingsMushrooms" text="Mushrooms"></CheckBox>
+        <CheckBox fx:id="toppingsOlives" text="Olives"></CheckBox>
+    </VBox>
+    
+    <VBox GridPane.rowIndex="2" GridPane.columnIndex="3">
+        <Label text="Drinks" styleClass="fancy-text"/>
+        <RadioButton text="Coke" toggleGroup="$drinks">
+        </RadioButton>
+        <RadioButton text="Juice" toggleGroup="$drinks">
+        </RadioButton>
+        <RadioButton text="Chocolate Milk" toggleGroup="$drinks">
+        </RadioButton>
+        <TextField fx:id="numDrinks"/>
+    </VBox>
+    
+    <HBox GridPane.rowIndex="3"  GridPane.columnIndex="0" styleClass="HBox"
+          GridPane.columnSpan="5"> 
+        <Label text="Ordered Items" styleClass="fancy-text"/>
+    </HBox>
+    
+    <TextArea GridPane.rowIndex="4" GridPane.columnIndex="0" 
+          GridPane.columnSpan="5" fx:id="receiptField" editable="false" 
+              styleClass="serious-text">
+    </TextArea>
+    
+    <HBox GridPane.rowIndex="5" GridPane.columnIndex="0" 
+          GridPane.columnSpan="5" styleClass="HBox">
+        <Button fx:id="btnOK" text="_OK"/>
+        <Button fx:id="btnCancel" text="_Cancel"/>
+    </HBox>
+    
+</GridPane>

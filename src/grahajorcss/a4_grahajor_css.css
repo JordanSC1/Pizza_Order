@@ -1,0 +1,76 @@
+/*
+a4_grahahjor_css.css
+a css file created to style the fxml elements for assignment 4
+
+Jordan Graham
+*/
+
+/* makes the section titles look fancy */
+.fancy-text {
+    -fx-font-size: 1.2em;
+    -fx-font-family: "Segoe Script";
+    -fx-alignment: center;
+}
+
+/* adds a dark border around the sections*/
+VBox {
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-padding: 5px;
+}
+
+/* makes both buttons the same width */
+.HBox Button {
+    -fx-pref-width: 70px;
+    -fx-pref-height: 25px;
+}
+
+/* makes the elements inside my HBoxes aligned in the center and adds space 
+between them */
+.HBox {
+    -fx-alignment: center;
+    -fx-spacing: 5;
+}
+
+/* styles the text displayed in the Ordered Items section  */
+.serious-text {
+    -fx-font-family: "Courier New";
+    -fx-font-size: 1.2em;
+}
+
+/* styles the entire gridpane, adds a gap between columns */
+.mainFxmlClass {
+    -fx-Hgap: 10px;
+}
+
+/* styles the entire gridpane, adds a gap between columns */
+.mainFxmlClass VBox{
+    -fx-margin: 10px;
+}
+
+/* styles the text in the MenuBar */
+.menu .label {
+    -fx-background-color: gray;
+    -fx-text-fill: orange;
+}
+
+/* styles the context menu (the thing that contains Exit) */
+.context-menu {
+    -fx-background-color: gray;
+}
+
+/* changes the color of a focused menu item to blue */
+.menu-item:focused .label {
+    -fx-background-color: lightblue;
+}
+
+/* i didnt like it whent the whole menuitem changed color so this stops the
+outer part from changing color when focused*/
+.menu-item:focused {
+    -fx-background-color: gray;
+}
+
+/* changes the color of the menu bar */
+MenuBar {
+    -fx-background-color: gray;
+}
